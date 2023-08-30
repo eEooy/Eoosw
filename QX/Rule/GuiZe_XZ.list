@@ -6,7 +6,7 @@ host, ad.12306.cn, direct
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > anti-ad
-host-keyword, , direct
+host-keyword, anti-ad.net, direct
 
 # > 爱影视
 host,static.jssp.tv, direct
