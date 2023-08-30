@@ -1,1 +1,123 @@
+#!name=分流修正&补充
 
+# >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
+host, ad.12306.cn, direct
+
+
+# >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
+# > anti-ad
+host-keyword, , direct
+# 阿里云
+IP-CIDR, 203.107.1.1/24, REJECT
+# 安全浏览限制解除
+HOST, lookup.api.bsb.baidu.com, REJECT
+HOST, proxy.safebrowsing.apple, REJECT
+HOST, safebrowsing.g.applimg.com, REJECT
+HOST, safebrowsing.googleapis.com, REJECT
+HOST, safebrowsing.urlsec.qq.com, REJECT
+HOST, token.safebrowsing.apple, REJECT
+HOST, vs6.bj2ct.u3.ucweb.com, REJECT
+HOST-SUFFIX, safebrowsing.apple, REJECT
+HOST-SUFFIX, u3.ucweb.com, REJECT
+
+# > 爱影视
+host,static.jssp.tv, direct
+host,lain.bgm.tv, direct
+host,tiao.cjkypo.com, direct
+host,ok.zuidapic.com, direct
+host,ts.thefilehosting.com, direct
+host,deo.shopeemobile.com, direct
+host,m3u8.255tv.tk, direct
+host,m3u8.mstopq.com, direct
+host,ain.bgm.tv, direct
+host-keyword,vip.lz-cdn, direct
+host-keyword,ax1x.com, direct
+host-keyword,o.lencr.org, direct
+host-keyword,ttcdn-tos.kkimg.cc, direct
+
+# >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
+# 百度地图
+HOST, afdconf.baidu.com, REJECT
+HOST, httpdns.baidubce.com, REJECT
+HOST, lc.map.baidu.com, REJECT
+# 百度贴吧
+IP-CIDR, 180.76.76.200/32, REJECT
+# 哔哩哔哩
+HOST, mall.bilibili.com, REJECT
+HOST, passport.bilibili.com, REJECT
+
+# >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
+# 菜鸟
+IP-CIDR, 117.161.156.227/32, REJECT
+# 彩云天气
+HOST, ad.cyapi.cn, REJECT
+# ChatGPT
+HOST, o33249.ingest.sentry.io, REJECT
+# Clue 智库
+HOST, api.helloclue.com, REJECT
+HOST, brahe.apptimize.com, REJECT
+HOST, collector.clue.run, REJECT
+HOST, images.ctfassets.net, REJECT
+HOST, mapi.apptimize.com, REJECT
+HOST, md-i-s.apptimize.com, REJECT
+
+# >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
+# > 大师兄影视
+host,sdk.alibaba.com.ailbaba.me, direct
+host,img.ffzypic.com, direct
+host,img.liangzipic.com, direct
+host,img.bfzypic.com, direct
+host,img.kuaikanzy.net, direct
+host,vip.imgffzy.com, direct
+host,vip.ffzyread.com, direct
+host,cdn.jsdelivr.net, direct
+host,image.maimn.com, direct
+host-keyword,bfzycdn.com, direct
+host-keyword,vip.kuaikan-cdn, direct
+host-keyword,vip.ffzy-play, direct
+host-keyword,vip.ffzy-online, direct
+
+# >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
+# > 苹果推送服务
+host-keyword, push.apple.com, direct
+# > 苹果时间同步
+host, time.apple.com, direct
+# > 苹果天气服务
+host-keyword, weather-edge.apple.com, direct
+host-keyword, weather-adge.apple.com, direct
+host-suffix, weather-data.apple.com, direct
+host-suffix, weather-map.apple.com, direct
+host-suffix, weather-analytics-events.apple.com, direct
+# > 苹果内购服务
+host-keyword, buy.itunes.apple.com, direct
+# > 苹果icloud
+host-keyword, icloud.com, direct
+# > 苹果输入法相关服务
+host-keyword, api.smoot.apple.com, direct
+host-keyword, api.smoot.apple.cn, direct
+# > 苹果iMessage服务
+host, init.ess.apple.com, direct
+# > 苹果其他服务
+host-keyword, ssl.apple.com, direct
+host-keyword, humb.apple.com, direct
+host-keyword, api-adservices.apple.com, direct
+host-keyword, ls.apple.com, direct
+host-keyword, gsa.apple.com, direct
+host-keyword, ess.apple.com, direct
+
+
+
+# >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
+# > QQ空间
+host-keyword, ctc.qzs.qzone.qq.com, direct
+
+
+# >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
+# > 携程
+host-keyword, aw-s.tripcdn.com, direct
+
+# > 其他分流修正
+# > 路由器后台
+ip-cidr, 192.168.0.1/24, direct
+# > 天翼网关
+ip-cidr, 192.168.1.1/24, direct
