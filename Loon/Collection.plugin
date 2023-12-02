@@ -341,7 +341,7 @@ http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* requires-bo
 #************************************#
 # Darkroom解锁
 # hostname = api.revenuecat.com
-^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32}) script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/Darkroom/Darkroom_crack.js, requires-body = true, tag=Darkroom解锁, img-url = https://gitlab.com/isous/loonresource/-/raw/master/Icon/Darkroom.png
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32}) script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/Darkroom/Darkroom_crack.js, requires-body = true, tag=Darkroom解锁, img-url = https://gitlab.com/isous/loonresource/-/raw/master/Icon/Darkroom.png
 
 #************************************#
 [MITM]
