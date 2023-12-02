@@ -339,6 +339,11 @@ http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script
 http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/APTV.js, tag=APTV解锁会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/aptv.png
 
 #************************************#
+# Darkroom解锁
+# hostname = api.revenuecat.com
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32}) script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/Darkroom/Darkroom_crack.js, requires-body = true, tag=Darkroom解锁, img-url = https://gitlab.com/isous/loonresource/-/raw/master/Icon/Darkroom.png
+
+#************************************#
 [MITM]
 hostname = photos.adobe.io, api-weather.andy.works, lchttpapi.xczim.com, shimo.im, widget-box-api.codefuture.top, *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, www.fuyoutech.club, *.kakamobi.cn, api.geefoo.cn, mobile.flightradar24.com, oxfordx.cp.com.cn, api-service.tutusouti.com, xunji.gxzckj.com, *.oracle.bendingspoonsapps.com, www.mymorpholio.com, api.timetreeapp.com, cad.glodon.com, yopu.co, api.hummingbird.businessreview.global, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, service.ilovepdf.com, format-api.netpock.com, cubox.*, *.aoscdn.com, *.apsapp.cn, *.aliyundrive.com, *.alipan.com, pan.baidu.com, mb3admin.com, iosv2.cjapi.5fun.com, app.yiyan.art, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
 
