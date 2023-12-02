@@ -303,6 +303,11 @@ http-request ^https?:\/\/cm15-c110-3\.play\.bokecc\.com\/flvs script-path=https:
 # hostname = *-slidebox-ios-prod.cloudfunctions.net
 http-response ^https?:\/\/.*-slidebox-ios-prod\.cloudfunctions\.net\/api.+ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/slidebox.js, requires-body=true, tag=Slidebox-相册清理
 
+#************************************#
+# FitnessView解锁会员
+# hostname = buy.itunes.apple.com
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/FitnessView.js, requires-body=true, tag=FitnessView解锁会员
+
 
 #************************************#
 [MITM]
