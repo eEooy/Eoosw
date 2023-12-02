@@ -58,11 +58,6 @@ http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satel
 http-response ^https?:\/\/app\.yiyan\.art\/yiyan script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/yiyan.js, requires-body=true, tag=一言
 
 #************************************#
-# 网速管家
-# hostname = api*.speedtest.cn
-http-response ^https?:\/\/api.*\.speedtest\.cn\/user\/info script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/wsgj.js, requires-body=true, tag=网速管家
-
-#************************************#
 # 悟饭掌悦
 # hostname = iosv2.cjapi.5fun.com
 http-response http:\/\/iosv2\.cjapi\.5fun\.com script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/wfzy.js, requires-body=true, tag=悟饭掌悦
@@ -311,6 +306,10 @@ http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=http
 
 #************************************#
 [MITM]
-hostname = *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, www.fuyoutech.club, *.kakamobi.cn, api.geefoo.cn, mobile.flightradar24.com, oxfordx.cp.com.cn, api-service.tutusouti.com, xunji.gxzckj.com, *.oracle.bendingspoonsapps.com, www.mymorpholio.com, api.timetreeapp.com, cad.glodon.com, yopu.co, api.hummingbird.businessreview.global, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, service.ilovepdf.com, format-api.netpock.com, cubox.*, *.aoscdn.com, *.apsapp.cn, *.aliyundrive.com, *.alipan.com, pan.baidu.com, mb3admin.com, iosv2.cjapi.5fun.com, api*.speedtest.cn, app.yiyan.art, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
+hostname = *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, www.fuyoutech.club, *.kakamobi.cn, api.geefoo.cn, mobile.flightradar24.com, oxfordx.cp.com.cn, api-service.tutusouti.com, xunji.gxzckj.com, *.oracle.bendingspoonsapps.com, www.mymorpholio.com, api.timetreeapp.com, cad.glodon.com, yopu.co, api.hummingbird.businessreview.global, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, service.ilovepdf.com, format-api.netpock.com, cubox.*, *.aoscdn.com, *.apsapp.cn, *.aliyundrive.com, *.alipan.com, pan.baidu.com, mb3admin.com, iosv2.cjapi.5fun.com, app.yiyan.art, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
+
+
+
+
 
 
