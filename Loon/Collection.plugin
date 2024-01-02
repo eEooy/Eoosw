@@ -362,7 +362,7 @@ http-response ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/ s
 # Spark-Mail解锁🔓
 # hostname = api.revenuecat.com
 
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/spark.js, requires-body=true, timeout=60, tag=Spark-Mail解锁🔓
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/spark.js, requires-body=true, timeout=60, tag=Spark-Mail解锁🔓
 
 #************************************#
 
@@ -389,13 +389,13 @@ http-request ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscrip
 # ✅ Rootd 美区2.50.0
 # hostname = api.revenuecat.com
 
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Rootd.js, requires-body=true, timeout=10, tag=Rootd
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Rootd.js, requires-body=true, timeout=10, tag=Rootd
 
 #************************************#
 # ✅ GitHub 1.142.1
 #hostname = api.github.com
 
-https://api.github.com/graphql url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github.js, requires-body=true, timeout=10, tag=GitHub
+http-response ^https://api.github.com/graphql url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github.js, requires-body=true, timeout=10, tag=GitHub
 
 #************************************#
 
