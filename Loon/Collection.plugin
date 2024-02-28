@@ -406,6 +406,11 @@ http-response ^https:\/\/www\.1998xuexi\.com\/store-web\/(course\/getCurrCatalog
 
 
 #************************************#
+# ✅ 月经期助手（粉红羊驼）
+# hostname = buy.itunes.apple.com
+
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/celiangyuan.js, requires-body=true, timeout=60, tag=月经期助手（粉红羊驼）
+
 
 [MITM]
 hostname = www.1998xuexi.com, api.github.com, xrckeji.com, spclient.wg.spotify.com, *.docer.wps.cn,vipapi.wps.cn,account.wps.cn, account.wps.cn,*account.wps.com, photos.adobe.io, api-weather.andy.works, lchttpapi.xczim.com, shimo.im, widget-box-api.codefuture.top, *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, www.fuyoutech.club, *.kakamobi.cn, api.geefoo.cn, mobile.flightradar24.com, oxfordx.cp.com.cn, api-service.tutusouti.com, xunji.gxzckj.com, *.oracle.bendingspoonsapps.com, www.mymorpholio.com, api.timetreeapp.com, cad.glodon.com, yopu.co, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, service.ilovepdf.com, format-api.netpock.com, cubox.*, *.aoscdn.com, *.apsapp.cn, *.aliyundrive.com, *.alipan.com, pan.baidu.com, iosv2.cjapi.5fun.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
