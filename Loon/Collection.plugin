@@ -409,7 +409,8 @@ http-response ^https:\/\/www\.1998xuexi\.com\/store-web\/(course\/getCurrCatalog
 # ✅ 月经期助手（粉红羊驼）
 # hostname = buy.itunes.apple.com
 
-http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/celiangyuan.js, requires-body=true, timeout=60, tag=月经期助手（粉红羊驼）
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/celiangyuan.js, requires-body=true, timeout=60, tag=月经期助手（粉红羊驼）img-url = https://github.com/Toperlock/Quantumult/raw/main/icon/Pokemon/Pokemon-1106.png
+
 
 
 [MITM]
