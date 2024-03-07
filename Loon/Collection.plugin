@@ -325,11 +325,6 @@ http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script
 http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/APTV.js, tag=APTV解锁会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/aptv.png
 
 #************************************#
-# Darkroom解锁
-# hostname = api.revenuecat.com
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32}) script-path = , requires-body = true, tag=Darkroom解锁, img-url = https://gitlab.com/isous/loonresource/-/raw/master/Icon/Darkroom.png
-
-#************************************#
 # WPS解锁会员
 # hostname = account.wps.cn,*account.wps.com
 http-response ^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$ script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WPSOffice/Script/WPS.js, requires-body=true, timeout=10, tag=WPS解锁会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/wps.png
