@@ -20,9 +20,7 @@
 #=============UserScript=============#
 
 [URL Rewrite]
-# 彩云天气广告
-^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
-^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
+
 # 云听开屏广告/浮窗
 ^https?:\/\/ytmsout\.radio\.cn\/publish\/recScreen\/getLoadPage - reject-200
 # 墨迹天气横幅广告
