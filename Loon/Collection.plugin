@@ -174,17 +174,6 @@ http-response ^https?:\/\/bzpp2\.iwzbz\.com\/api\/.+\/(user\/getvipinfo|User\/ge
 http-response ^https?:\/\/yopu\.co\/api\/user\/info script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/youpume.js, requires-body=true, tag=有谱么
 
 #************************************#
-# CAD快速看图
-# hostname = cad.glodon.com
-http-response ^https?:\/\/cad\.glodon\.com\/(account|authorize\/query|alipay\/auth) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/cad.js, requires-body=true, tag=CAD快速看图
-
-
-#************************************#
-# MorpholidTrace-CAD草图设计
-# hostname = www.mymorpholio.com
-http-response ^https:\/\/www\.mymorpholio\.com\/api\/index\.php\/rest_iap\/receipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/MorpholioTrace.js, requires-body=true, tag=MorpholioTrace
-
-#************************************#
 # 解锁10个APP，包含APP：Filmicpro，Focos，Focos live，Splice，30 Day Fitness，Sleep，Remini，Yoga Wave，Firstlight，Doubletake
 # hostname = *.oracle.bendingspoonsapps.com
 http-response ^https?:\/\/.*\.oracle\.bendingspoonsapps\.com\/v\d\/(users\/.+|purchases\/verify) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bending.js, requires-body=true, tag=bending
@@ -255,7 +244,7 @@ http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script
 #************************************#
 # APTV解锁会员
 # hostname = api.revenuecat.com
-http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/APTV.js, tag=APTV解锁会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/aptv.png
+# http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/APTV.js, tag=APTV解锁会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/aptv.png
 
 #************************************#
 # WPS解锁会员
@@ -325,7 +314,7 @@ http-response https://youshiapp.com/api/v1/users/me script-path=https://raw.gith
 #************************************#
 
 [MITM]
-hostname = youshiapp.com, www.1998xuexi.com, api.github.com, xrckeji.com, *.docer.wps.cn,vipapi.wps.cn,account.wps.cn, account.wps.cn,*account.wps.com, photos.adobe.io, api-weather.andy.works, lchttpapi.xczim.com, widget-box-api.codefuture.top, *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.kakamobi.cn, *.oracle.bendingspoonsapps.com, www.mymorpholio.com, cad.glodon.com, yopu.co, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, format-api.netpock.com, *.aoscdn.com, *.apsapp.cn, pan.baidu.com, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
+hostname = youshiapp.com, www.1998xuexi.com, api.github.com, xrckeji.com, *.docer.wps.cn,vipapi.wps.cn,account.wps.cn, account.wps.cn,*account.wps.com, photos.adobe.io, api-weather.andy.works, lchttpapi.xczim.com, widget-box-api.codefuture.top, *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.kakamobi.cn, *.oracle.bendingspoonsapps.com, yopu.co, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, format-api.netpock.com, *.aoscdn.com, *.apsapp.cn, pan.baidu.com, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
 
 
 
