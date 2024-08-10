@@ -158,11 +158,6 @@ http-response ^https?:\/\/.*\.api\.moji\.com\/(sns\/json\/profile\/get_info_.+|j
 http-response ^https?:\/\/receipt-verifier\.cdwapi\.com\/receipt script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Pixelup.js, requires-body=true, tag=Pixelup
 
 #************************************#
-# 旅途随身听
-# hostname = www.1314zhilv.com
-http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(user.*\/getInfo|guideScenic) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/ltsst.js, requires-body=true, tag=旅途随身听
-
-#************************************#
 # 问真排盘
 # hostname = bzpp2.iwzbz.com
 http-response ^https?:\/\/bzpp2\.iwzbz\.com\/api\/.+\/(user\/getvipinfo|User\/getWXPW) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/wenzhenpaipan.js, requires-body=true, tag=问真排盘
@@ -203,12 +198,6 @@ http-response ^https?:\/\/(appss|standard)\.(rhinox.*|linhongshi)\.com\/.+\/acco
 # 水印宝/闪电水印/熊猫水印/水印全能王
 # hostname = water*.yunxiaoguo.cn
 http-response ^https?:\/\/water.*\.yunxiaoguo\.cn\/user\/info script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/shuiyin.js, requires-body=true, tag=shuiyin
-
-#************************************#
-# 星题库
-# hostname = cm15-c110-3.play.bokecc.com,  mb.xinghengedu.com
-http-response ^https?:\/\/mb\.xinghengedu\.com\/api\/.+\/getUserByToken\.do script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xingtiku.js, requires-body=true, tag=星题库-会员
-http-request ^https?:\/\/cm15-c110-3\.play\.bokecc\.com\/flvs script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Xingtikukecheng.js, requires-body=false, tag=星题库-课程
 
 #************************************#
 # Slidebox相册清理
@@ -258,14 +247,6 @@ http-response ^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/ove
 http-response ^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips requires-body=1,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSDocerVIPuserCrack.js, tag=WPS稻壳会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/wps.png
 http-request ^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) requires-body=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSDocerVIPowerCrack.js, tag=WPS稻壳会员, img-url = https://raw.githubusercontent.com/deezertidal/private/main/icons/wps.png
 
-#************************************#
-# Spark-Mail解锁🔓
-# hostname = api.revenuecat.com
-
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/spark.js, requires-body=true, timeout=60, tag=spark-Mail
-
-#************************************#
-
 # ✅ PureLibro
 # hostname = api.revenuecat.com
 
@@ -278,43 +259,11 @@ http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path
 
 http-response ^https:\/\/xrckeji\.com\/itally\/app\/user\/query script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mzjz.js, requires-body=true, timeout=10, tag=萌猪记账
 
-#************************************#
-
-# ✅ PDFexpert
-# hostname = license.pdfexpert.com
-
-http-request ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js, requires-body=true, timeout=10, tag=PDFexpert
-
-#************************************#
-# ✅ GitHub 1.142.1
-#hostname = api.github.com
-
-http-response https://api.github.com/graphql script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github.js, requires-body=true, timeout=60, tag=Github
-
-#************************************#
-
-# ✅ 1998课堂
-# hostname = www.1998xuexi.com
-
-http-response ^https:\/\/www\.1998xuexi\.com\/store-web\/(course\/getCurrCatalogue\.action|material\/getMaterialCateLog\.action|vip\/getMemberVipInfo\.action|vip\/getVipInfomationAll\.action) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/1998.js, requires-body=true, timeout=60, tag=1998课堂, img-url = https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1060.png
-
-
-#************************************#
-# ✅ 月经期助手（粉红羊驼）
-# hostname = buy.itunes.apple.com
-
-http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/celiangyuan.js, requires-body=true, timeout=60, tag=月经期助手(粉红羊驼)
-
-#************************************#
-# ✅ 有诗
-# hostname = youshiapp.com
-
-http-response https://youshiapp.com/api/v1/users/me script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/youshi.js, requires-body=true, timeout=60, tag=有诗
 
 #************************************#
 
 [MITM]
-hostname = youshiapp.com, www.1998xuexi.com, api.github.com, xrckeji.com, *.docer.wps.cn,vipapi.wps.cn,account.wps.cn, account.wps.cn,*account.wps.com, photos.adobe.io, api-weather.andy.works, lchttpapi.xczim.com, widget-box-api.codefuture.top, *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.kakamobi.cn, *.oracle.bendingspoonsapps.com, yopu.co, bzpp2.iwzbz.com, www.1314zhilv.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, format-api.netpock.com, *.aoscdn.com, *.apsapp.cn, pan.baidu.com, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
+hostname = xrckeji.com, *.docer.wps.cn,vipapi.wps.cn,account.wps.cn, account.wps.cn,*account.wps.com, photos.adobe.io, api-weather.andy.works, lchttpapi.xczim.com, widget-box-api.codefuture.top, *-slidebox-ios-prod.cloudfunctions.net, water*.yunxiaoguo.cn, *.rhinox*.com, appss.linhongshi.com, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.kakamobi.cn, *.oracle.bendingspoonsapps.com, yopu.co, bzpp2.iwzbz.com, receipt-verifier.cdwapi.com, *.api.moji.com, api.tuzhitong.com, api.yonekura.cn, api.getdailyart.com, p.du.163.com, drive*.quark.cn, *xmind.*, schedule-api.julanling.com, *.xiangha.com, www.40sishi.com, xianbeikeji.com, api-*.meitu.com, mobile-api.adguard.org, xremit.xcurrency.com, explorer.tratao.com, top-widgets-api.xiaozujian.com, iap.etm.tech, dashen-api.shuiyinyu.com, *.imendon.com, format-api.netpock.com, *.aoscdn.com, *.apsapp.cn, pan.baidu.com, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com
 
 
 
