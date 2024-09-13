@@ -81,7 +81,74 @@ docker run -d \
 （端口有个图 可全部打开）1/65535 TCP UDP这种。
 
 17.
-注册登陆CD2；（挂载网盘115，
+注册登陆CD2；（挂载网盘115，/CloudNAS/CloudDrive）
+
+18.
+cd /mnt/CloudNAS/
+复制CloudDrive的路径；似乎没啥用？
+
+19.
+在/mnt/docker文件夹下面 新建文件夹 “emby2115”
+
+双击打开并新建文件“compose.yaml”打开，复制粘贴如下：
+
+# 将该代码保存为 compose.yaml
+version: "3.5"
+services:
+  emby_server:
+    image: "emby/embyserver:latest"  # 这里改可以成第三方 embyServer 镜像
+    container_name: "emby_server"
+    restart: always
+    ports:
+      - "8096:8096"
+    volumes:
+      - "/mnt/docker/emby:/config"  # 这里是 EmbyServer 文件的保存地址，这样每次重新构建 EmbyServer 可以保证配置不丢失
+      - "/mnt/CloudNAS/CloudDrive/115:/media"  # /volume1/CloudNAS/115 用你上一步 CD2 中选择的地址替代
+    environment:
+      - "TZ=Asia/Shanghai"
+
+  emby_115:
+    image: "hicane/emby_115:latest"
+    container_name: "emby_115"
+    restart: always
+    environment:
+      - "TZ=Asia/Shanghai"
+    depends_on:
+      - emby_server
+    env_file: ./115.env
+
+  emby_nginx:
+    image: "hicane/emby_nginx:latest"
+    container_name: "emby_nginx"
+    restart: always
+    ports:
+      - "8097:80"
+    environment:
+      - "TZ=Asia/Shanghai"
+    depends_on:
+      - emby_115
+
+20.
+同地方新建文件“115.env”复制粘贴如下内容：
+
+# 将该代码保存为 115.env
+# 本机地址
+PUBLIC_HOST=http://8.147.234.233:8097
+
+# EMBY API KEY
+EMBY_API_KEY=f9023c上一步emby中的api换成复制替换包括这里
+
+# 115 Cookie
+COOKIE=UID包括UID这里替换成115的cookie
+
+# 挂载路径，这里media文件夹不变化
+MOUNT_PATH={"/media": ""}
+
+
+21.
+
+
+
 
 
 
