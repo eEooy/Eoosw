@@ -17,4 +17,83 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearm
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 5.
+sudo apt-get update
+
+6.
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+7.
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+此时如果存在就覆盖
+
+8.
+sudo apt-get update
+
+9.
+cat /etc/apt/sources.list.d/docker.list
+deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu jammy stable
+
+10.
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+到这里：After this operation, 437 MB of additional disk space will be used. Do you want to continue? [Y/n]
+输入y
+
+11.
+docker -version
+
+12.
+docker -v
+
+13.
+mkdir /mnt/docker/emby
+
+【1. **`mkdir /mnt/docker/emby`**：
+   - 这个命令会创建 `/mnt/docker/emby` 目录。
+   - 如果父目录 `/mnt/docker` 不存在，则会报错，因为 `mkdir` 不会自动创建父目录。
+
+2. **`mkdir -p /mnt/docker/emby`**：
+   - `-p` 选项告诉 `mkdir` 递归地创建所有必要的父目录。
+   - 如果父目录 `/mnt/docker` 不存在，`mkdir -p` 会自动创建它们。
+
+因此，如果你不确定父目录是否存在，或者需要创建多个嵌套目录，建议使用 `-p` 选项。】
+
+14.
+mkdir -p /mnt/docker/emby
+
+15.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
