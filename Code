@@ -144,8 +144,50 @@ COOKIE=UID包括UID这里替换成115的cookie
 # 挂载路径，这里media文件夹不变化
 MOUNT_PATH={"/media": ""}
 
+保存文件。
 
 21.
+切换到刚刚.yaml这个文件的目录
+cd /mnt/docker/emby2115
+
+22.
+docker-compose up -d
+
+23.
+上次这里出现了docker-compose未安装或不正确，
+用下面代码操作：
+
+sudo apt-get update && sudo apt-get install docker-compose-plugin
+
+（更新包列表：
+   sudo apt-get update
+安装 Docker Compose 插件：
+   sudo apt-get install docker-compose-plugin）
+
+24.
+docker compose version
+
+25.
+上次有docker-compose未安装或不正确，使用：
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+26.
+sudo chmod +x /usr/local/bin/docker-compose
+（上面可以一俩次）再次输入：
+docker-compose --version
+
+27.
+仍然在那个文件夹路径，前面建立yaml和env文件后在这里，中间遇到了错误；
+输入：
+docker-compose up -d
+能看到Running的三个“emby_server、emby_115、emby_nginx”
+
+28.
+
+
+
+
 
 
 
