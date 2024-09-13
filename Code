@@ -182,8 +182,35 @@ docker-compose --version
 输入：
 docker-compose up -d
 能看到Running的三个“emby_server、emby_115、emby_nginx”
+最后出现 ✅
 
 28.
+仍然在/mnt/docker/emby2115#里 此时再去emby端口网页 找到api替换 env文件里面德内容。
+
+29.
+docker compose down
+
+三个服务
+Network emby2115_default Removed
+
+30.
+docker-compose up -d
+上面那次又重新启动
+
+使用ip+8097端口可以直链播放115
+
+
+
+✅安装完成✅
+
+安装alist
+官方网页有教程
+1.
+curl -fsSL "https://alist.nn.ci/v3.sh" | bash -s install
+（一遍失败再来一次）
+
+按教程 cd到目录 手动设置密码
+
 
 
 
