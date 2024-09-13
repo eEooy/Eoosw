@@ -63,7 +63,25 @@ mkdir /mnt/docker/emby
 mkdir -p /mnt/docker/emby
 
 15.
+docker run -d \
+  --name clouddrive2 \
+  --env TZ=Asia/Shanghai \
+  --env CLOUDDRIVE_HOME=/Config \
+  --volume /mnt/CloudNAS:/CloudNAS:shared \
+  --volume /mnt/docker/clouddrive2/config:/Config \
+  --device /dev/fuse:/dev/fuse \
+  --restart unless-stopped \
+  --pid host \
+  --privileged \
+  --network host \
+  cloudnas/clouddrive2
 
+16.
+此时端口打开的话 可以 IP+19798 打开clouddrive2
+（端口有个图 可全部打开）1/65535 TCP UDP这种。
+
+17.
+注册登陆CD2；（挂载网盘115，
 
 
 
