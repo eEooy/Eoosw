@@ -1,1 +1,17 @@
 mp命名规则：
+
+明白了，以下是更新后的规则和示例：
+
+### 新命名规则
+
+```
+{{title}} ({{year}}) - {{original_title}}{% if part %} - {{part}}{% endif %}{% if videoFormat %} - [{{videoFormat}}]{% endif %}{% if edition %} [{{edition}}]{% endif %}{% if videoCodec %} [{{videoCodec}}]{% endif %}{% if audioCodec %} [{{audioCodec}}]{% endif %}{% if releaseGroup %} [{{releaseGroup}}]{% endif %}{{fileExt}}
+```
+
+### 示例
+
+根据你的文件信息，生成的文件名会是：
+
+```
+蝙蝠侠大战超人：正义黎明 (2016) - Batman v Superman: Dawn of Justice - [2160p][PROPER EXTENDED IMAX][HEVC][DTS-HD.MA TrueHD.7.1.Atmos][Mo Cuishle].mkv
+```
