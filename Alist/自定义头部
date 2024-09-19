@@ -71,7 +71,7 @@
     }
 /* 黑夜模式背景 */
     .hope-ui-dark {
-        background-image: url(https://s2.loli.net/2023/03/08/bNu3zJgXqZ8lF5s.webp) !important;
+        background-image: url(https://raw.githubusercontent.com/eEooy/Eoosw/main/Alist/IMG_3460.jpeg) !important;
         background-attachment: fixed;
         background-position: 100%;
         background-size: cover;
