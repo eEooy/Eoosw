@@ -4,7 +4,7 @@
     <div>
         <!--鼠标点击特效 - 爱心-->
         <script type="text/javascript">
-            ! function (e, t, a) {
+            !function (e, t, a) {
                 function r() {
                     for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[
                             e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x +
@@ -104,7 +104,68 @@
         <br />
         <br />
     </div>
- 
+
+    <!--设备检测和动态背景-->
+    <script src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/mobile-detect.js"></script>
+    <script>
+        // 设备检测
+        var md = new MobileDetect(window.navigator.userAgent);
+
+        // 更新频率，以毫秒为单位
+        const updateFrequency = 86400000; // 示例：每天更新。可以调整为每分钟等
+
+        // 资源基础URL和资源数量
+        const baseVideoUrl =
+            "http://res.fatfoxtab.com/public/res/wallpaper-dynamic/wallpaper-dynamic-"; //视频URL
+        const videoCount = 25; //有多少个视频
+        const baseImageUrl =
+            "在这里换成你的图片URL"; //图片URL
+        const imageCount = 44; //有多少个图片
+
+        function updateBackground() {
+            const index = Math.floor(new Date().getTime() / updateFrequency);
+            if (!md.phone() && !md.tablet()) {
+                // 非移动设备，使用视频背景
+                updateVideoBackground(index);
+            } else {
+                // 移动设备，使用图片背景
+                updateImageBackground(index);
+                window.onload = updateBackground; // 当页面加载或刷新时调用updateBackground
+            }
+        }
+
+        function updateVideoBackground(index) {
+            let videoContainer = document.querySelector(
+                ".video-background-container"
+            );
+            if (!videoContainer) {
+                videoContainer = document.createElement("div");
+                videoContainer.className = "video-background-container";
+                videoContainer.innerHTML =
+                    '<video autoplay muted loop style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1000;"></video>';
+                document.body.prepend(videoContainer);
+            }
+            const videoIndex = (index % videoCount) + 1;
+            videoContainer.querySelector(
+                "video"
+            ).src = `${baseVideoUrl}${videoIndex}.mp4`;
+        }
+
+        function updateImageBackground(index) {
+            const imageIndex = (index % imageCount) + 1;
+            const imageUrl = `${baseImageUrl}${imageIndex}.jpg`;
+            document
+                .querySelectorAll(".hope-ui-light, .hope-ui-dark")
+                .forEach((element) => {
+                    element.style.backgroundImage = `url("${imageUrl}")`;
+                });
+        }
+
+        // 页面加载时和定时更新背景
+        document.addEventListener("DOMContentLoaded", updateBackground);
+        setInterval(updateBackground, updateFrequency);
+    </script>
+
     <!--一言API-->
     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <!--延迟加载范围到这里结束-->
@@ -125,24 +186,16 @@
 <!--<canvas id="canvas-basic"></canvas> -->
 <script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
 <script>
-var granimInstance = new Granim({
-    element: '#canvas-basic',
-    direction: 'left-right',
-    isPausedWhenNotInView: true,
-    states : {
-        "default-state": {
-            gradients: [
-                ['#a18cd1', '#fbc2eb'],
-                 ['#fff1eb', '#ace0f9'],
-                 ['#d4fc79', '#96e6a1'],
-                 ['#a1c4fd', '#c2e9fb'],
-                 ['#a8edea', '#fed6e3'],
-                 ['#9890e3', '#b1f4cf'],
-                 ['#a1c4fd', '#c2e9fb'],
-                 ['#fff1eb', '#ace0f9']
-           
-            ]
-        }
-    }
-});
-</script>
+    var granimInstance = new Granim({
+        element: '#canvas-basic',
+        direction: 'left-right',
+        isPausedWhenNotInView: true,
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#a18cd1', '#fbc2eb'],
+                    ['#fff1eb', '#ace0f9'],
+                    ['#d4fc79', '#96e6a1'],
+                    ['#a1c4fd', '#c2e9fb'],
+                    ['#a8edea', '#fed6e3'],
+                    ['#9890e3',
