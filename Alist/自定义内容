@@ -1,8 +1,34 @@
-<!--延迟加载-->
-<!--如果要写自定义内容建议都加到这个延迟加载的范围内-->
-<div id="customize" style="display: none;">
-    <div>
-        <!--鼠标点击特效 - 爱心-->
+<script src="https://time-counter.onmicrosoft.cn/counter.js" async="" id="online-counter" interval="240" api="https://time-counter.onmicrosoft.cn/counter" room="666"></script>
+
+<!-- 白小猫咪-->
+<!-- 
+<script src=" https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script>
+<script>
+    L2Dwidget.init({
+        "model": {
+            jsonPath: " https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json" ,
+            "scale": 1
+        },
+        "display": {
+            "position": "right",
+            "width": 100,
+            "height": 150,
+            "hOffset": -20,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": false,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 1,
+            "opacityOnHover": 1
+        }
+    });
+</script>
+-->
+<!--鼠标点击特效 - 爱心-->
         <script type="text/javascript">
             !function (e, t, a) {
                 function r() {
@@ -56,7 +82,15 @@
             }(window, document);
         </script>
         
-        <br />
+
+
+
+<!--延迟加载-->
+<!--如果要写自定义内容建议都加到这个延迟加载的范围内-->
+<div id="customize" style="display: none;">
+    <div>
+
+               <br />
         <center class="dibu">
             <div style=" line-height: 20px;font-size: 9pt;font-weight: bold;">
                 <span>
@@ -69,7 +103,7 @@
                 </span>
                 <p style="margin-left: 10rem;font-size: 8pt;">
                     <small>
-                        —— Anwen's Cloud
+                        —— Eliva's Cloud
                     </small>
                 </p>
             </div>
@@ -107,40 +141,56 @@
 
 <script src="https://time-counter.onmicrosoft.cn/counter.js" async="" id="online-counter" interval="240" api="https://time-counter.onmicrosoft.cn/counter" room="666"></script>
 
-<!-- 白小猫咪-->
-<!-- 
-<script src=" https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script>
-<script>
-    L2Dwidget.init({
-        "model": {
-            jsonPath: " https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json" ,
-            "scale": 1
-        },
-        "display": {
-            "position": "right",
-            "width": 100,
-            "height": 150,
-            "hOffset": -20,
-            "vOffset": -20
-        },
-        "mobile": {
-            "show": false,
-            "scale": 0.5
-        },
-        "react": {
-            "opacityDefault": 1,
-            "opacityOnHover": 1
-        }
-    });
-</script>
--->
 
-    <!--一言API-->
-    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+        <!--开站时间开始-->       
+        <div style="background-color: #eee;;border-radius: 20px;bottom:10px;position:relative;width:280px;text-align:center;">
+            <script type="text/javascript">
+                function show_runtime() {
+                    window.setTimeout("show_runtime()", 1000);
+                    X = new Date("09/20/2024 00:00:00");
+                    Y = new Date();
+                    T = (Y.getTime() - X.getTime());
+                    M = 24 * 60 * 60 * 1000;
+                    a = T / M;
+                    A = Math.floor(a);
+                    b = (a - A) * 24;
+                    B = Math.floor(b);
+                    c = (b - B) * 60;
+                    C = Math.floor((b - B) * 60);
+                    D = Math.floor((c - C) * 60);
+                    runtime_span.innerHTML = "本站已运行 " + A + "天" + B + "小时" + C + "分" + D + "秒"
+                }
+                show_runtime();
+            </script>
+            <!--<span id="runtime_span"></span>-->
+        </div>
+<div class="a3"><span id="runtime_span"></span></div>
+
+
+
+
+
+       <center>
+            <div style=" line-height: 20px;font-size: 12pt;font-weight: bold;">
+                <span style="color: rgb(13, 109, 252); font-weight: bold;" id="hitokoto">"🌼 纸屏石枕竹方床 手倦抛书午梦长 🌼"</span> 
+                <p style="margin-left:10rem;font-size:13pt;color: rgb(246 255 2);"> —— Eliva
+            </div>
+             <!--一言API-->
+             <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+        </center>
+ 
+
+    <!--<center class="dibu">
+            <div style=" line-height: 18px;font-size: 17pt;font-weight: bold;">
+                <span>
+                    <span style="color: rgb(13, 109, 252); font-weight: bold;"
+                        id="jinrishici-sentence">正在加载今日诗词....</span>
+                </span>
+            </div>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>-->
+
 <!--延迟加载范围到这里结束-->
 </div>
-
 <!--延迟加载配套使用JS-->
 <script>
     let interval = setInterval(() => {
@@ -150,22 +200,3 @@
         }
     }, 200);
 </script>
-
-<!-- 渐变背景初始化,如果要使用渐变背景把下面的那一行注释去掉即可-->
-<!-- 下面的几行都是渐变的一套,自定义头部内还有一个关联的自定义CSS -->
-<!--<canvas id="canvas-basic"></canvas> -->
-<script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
-<script>
-    var granimInstance = new Granim({
-        element: '#canvas-basic',
-        direction: 'left-right',
-        isPausedWhenNotInView: true,
-        states: {
-            "default-state": {
-                gradients: [
-                    ['#a18cd1', '#fbc2eb'],
-                    ['#fff1eb', '#ace0f9'],
-                    ['#d4fc79', '#96e6a1'],
-                    ['#a1c4fd', '#c2e9fb'],
-                    ['#a8edea', '#fed6e3'],
-                    ['#9890e3',
