@@ -11,6 +11,32 @@
 
 <style>
 
+/* 去除通知栏 右上角 X */
+.notify-render .hope-close-button {
+    display: none;
+}
+/*底部CSS，.App .table这三个一起的*/
+ dibu {
+    border-top: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.App {
+    min-height: 85vh;
+}
+.table {
+    margin: auto;
+}
+ 
+/*去掉底部*/
+.footer {
+    display: none!important;
+}
+
+
 
 
     /* 
