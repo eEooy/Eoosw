@@ -74,15 +74,9 @@
                 </p>
             </div>
 
-            <div style="font-size: 13px; font-weight: bold;">
+            <div style="font-size: 15px; font-weight: bold;">
                 <span class="nav-item">
-                    <a class="nav-link" href="xxxxxxxxxx" target="_blank">
-                        <i class="fab fa-qq" style="color:#409EFF" aria-hidden="true"></i>
-                        QQ |
-                    </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="mailto:xxxxx@foxmail.com" target="_blank">
+                    <a class="nav-link" href="mailto:699996@protonmail.com" target="_blank">
                         <i class="fa-duotone fa-envelope-open" style="color:#409EFF" aria-hidden="true"></i>
                         邮箱 |
                     </a>
@@ -94,42 +88,15 @@
                     </a>
                 </span>
                 <span class="nav-item">
-                    <a class="nav-link" href="xxxxxxxx" target="_blank">
-                        <i class="fas fa-comment-lines" style="color:#409EFF;" aria-hidden="true"></i>
-                        留言 |
-                    </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="xxxxxxx" target="_blank">
-                        <i class="fa fa-cloud-download" style="color:#409EFF;" aria-hidden="true"></i>
-                        云盘 |
-                    </a>
-                </span>
-                <!--后台入口-->
-                <span class="nav-item">
                     <a class="nav-link" href="/@manage" target="_blank">
                         <i class="fa-solid fa-folder-gear" style="color:#409EFF;" aria-hidden="true"></i>
                         管理 |
                     </a>
                 </span>
-                <!--版权，请尊重作者-->
                 <span class="nav-item">
                     <a class="nav-link" href="https://github.com/Xhofe/alist" target="_blank">
                         <i class="fa-solid fa-copyright" style="color:#409EFF;" aria-hidden="true"></i>
                         Alist
-                    </a>
-                </span>
-                <br />
-                <!--添加一个访问量-->
-                <span>
-                    本"<span style="color: rgb(13, 109, 252); font-weight: bold;"><a href="#">目录</a></span>"访问量 <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span> 次 本站总访问量 <span id="busuanzi_value_site_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span> 次 本站总访客数 <span id="busuanzi_value_site_uv" style="color: rgb(13, 109, 252); font-weight: bold;"></span> 人
-                </span>
-                <br />
-                <!--添加备案信息-->
-                <span class="nav-item">
-                    <a class="nav-link" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-                        <i class="fa-solid fa-shield-check" style="color:#409EFF;" aria-hidden="true"></i>
-                        冀 ICP备2222000777号
                     </a>
                 </span>
             </div>
