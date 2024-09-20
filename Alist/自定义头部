@@ -1,194 +1,165 @@
-<!--自定义头部开始-->
-<!--Alist V3建议添加的，已经默认添加了，如果你的没有建议加上-->
+<!-- 自定义头部开始 -->
+
+<!-- Polyfill 支持 -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
+<!-- 提供对旧版浏览器的支持，使其能够使用现代 JavaScript 特性 -->
 
-<!-- Font6，自定义底部使用和看板娘使用的图标和字体文件-->
-<link type='text/css' rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.0.1/css/fontawesome.min.css" media='all'>
-<link href="https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css" rel="stylesheet">
+<!-- Font6 图标库 -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.0.1/css/fontawesome.min.css" media="all">
+<!-- 引入 FontAwesome 图标库，用于使用图标 -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css">
+<!-- 引入 Font6 图标库，提供更多图标选择 -->
 
-<!-- 引入字体，全局字体使用 -->
+<!-- 引入字体 -->
 <style>
 @font-face {
-    font-family: 'HarmonyOS Medium';
-    src: url('https://raw.githubusercontent.com/eEooy/Eoosw/refs/heads/main/Alist/TTF/HarmonyOSMedium.ttf') format('truetype');
+    font-family: 'HarmonyOS Medium'; <!-- 定义自定义字体名称 -->
+    src: url('https://raw.githubusercontent.com/eEooy/Eoosw/refs/heads/main/Alist/TTF/HarmonyOSMedium.ttf') format('truetype'); <!-- 字体文件来源 -->
 }
 
 * {
-    font-family: 'HarmonyOS Medium', sans-serif;
-    font-weight: bold;
+    font-family: 'HarmonyOS Medium', sans-serif; <!-- 全局字体设置为自定义字体 -->
+    font-weight: bold; <!-- 全局字体加粗 -->
 }
 body {
-    font-family: 'HarmonyOS Medium', sans-serif;
+    font-family: 'HarmonyOS Medium', sans-serif; <!-- 设置 body 的字体为自定义字体 -->
 }
 </style>
 
-
+<!-- 样式设置 -->
 <style>
-/* 去除通知栏 右上角 X */
+/* 隐藏通知栏右上角的关闭按钮 */
 .notify-render .hope-close-button {
-    display: none;
+    display: none; <!-- 隐藏通知栏的关闭按钮 -->
 }
 
-
-/*图标和按钮*/
+/* 图标和按钮颜色设置 */
 .hope-icon {
-	color: #8abcd1 !important
-		/*设置所有图标颜色*/
+    color: #8abcd1 !important; /* 设置所有图标颜色为秋波蓝 */
 }
 
 .hope-button {
-	color: #fff !important;
-	/*设置按钮字体为白色*/
-	background-color: #8abcd1 !important
-		/*设置按钮背景为粉色*/
-}
-.hope-ui-dark .hope-c-ivMHWx-hZistB-cv.hope-c-PJLV.hope-c-PJLV-iikaotv-css {
- background-color: #202425 !important; /* 暗色模式下设置特定元素的背景为深灰色 */
+    color: #fff !important; /* 设置按钮字体颜色为白色 */
+    background-color: #8abcd1 !important; /* 设置按钮背景颜色为秋波蓝 */
 }
 
+/* 暗色模式下特定元素背景色设置 */
+.hope-ui-dark .hope-c-ivMHWx-hZistB-cv.hope-c-PJLV {
+    background-color: #202425 !important; /* 暗色模式下特定元素的背景色为深灰色 */
+}
+
+/* 特定元素及其 SVG 的颜色设置 */
 .hope-c-PJLV-ijzCLcW-css,
 .hope-c-mHASU-kFfbLQ-colorScheme-info,
-.hope-ui-dark .hope-c-ivMHWx-hZistB-cv.hope-c-PJLV.hope-c-PJLV-iikaotv-css svg {
- color: #ffb6c1 !important; /* 设置特定元素和其 SVG 的颜色为粉色 */
+.hope-ui-dark .hope-c-ivMHWx-hZistB-cv.hope-c-PJLV svg {
+    color: #ffb6c1 !important; /* 设置特定元素及其 SVG 的颜色为粉色 */
 }
 
+/* 聚焦状态下的边框和阴影效果 */
 .hope-c-mHASU-kFfbLQ-colorScheme-info[data-focus] {
- border-color: #ffb6c1 !important; /* 聚焦状态下的边框颜色 */
- box-shadow: 0 0 0 2px #ffcdd4 !important; /* 聚焦时的阴影效果 */
+    border-color: #ffb6c1 !important; /* 聚焦状态下边框颜色为粉色 */
+    box-shadow: 0 0 0 2px #ffcdd4 !important; /* 聚焦时的阴影效果 */
 }
 
-.hope-ui-light .hope-c-mHASU-kFfbLQ-colorScheme-info svg {
- color: white !important; /* 亮色模式下 SVG 颜色为白色 */
-}
-
-.hope-ui-dark .hope-c-mHASU-kFfbLQ-colorScheme-info svg {
- color: #202425 !important; /* 暗色模式下 SVG 颜色为深灰色 */
-}
-
+/* 悬停时图标颜色设置 */
 .left-toolbar-box svg:hover,
 .center-toolbar svg:hover {
- color: white !important; /* 悬停时图标颜色为白色 */
- background-color: #ffb6c1; /* 悬停时背景颜色为粉色 */
+    color: white !important; /* 悬停时图标颜色为白色 */
+    background-color: #ffb6c1; /* 悬停时背景颜色为粉色 */
 }
 
-.hope-c-PJLV-icHSmvX-css {
- border-radius: 5px; /* 设置元素的圆角 */
+/* 顶部 Header 背景设置为透明 */
+#root > div.header {
+    background-color: transparent; /* 设置顶部 Header 背景为透明 */
 }
 
-/*顶部header*/
-#root>div.header.hope-center.hope-c-jKOUQW.hope-c-PJLV.hope-c-PJLV-ikaMhsQ-css {
- background-color: transparent; /* 设置顶部 Header 背景为透明 */
-}
-
-/*标题栏*/
+/* 标题栏样式设置 */
 .hope-ui-light .hope-breadcrumb__list,
-#root>div.hope-c-PJLV.hope-c-PJLV-iicyfOA-css>div>nav {
- border-radius: 10px !important; /* 设置标题栏的圆角 */
+#root > div.hope-c-PJLV > div > nav {
+    border-radius: 10px !important; /* 设置标题栏的圆角 */
+    background-color: rgba(255, 255, 255, 0.7); /* 设置标题栏背景为半透明白色 */
 }
 
-.hope-ui-light div.hope-c-PJLV.hope-c-PJLV-iicyfOA-css>div>nav {
- background-color: rgba(255, 255, 255, .7); /* 设置标题栏背景为半透明白色 */
+/* 隐藏搜索框 */
+.header-right .hope-c-dhzjXW {
+    display: none !important; /* 隐藏搜索框 */
 }
 
-/*搜索框*/
-.header-right .hope-c-dhzjXW.hope-c-PJLV-ihYBJPK-css {
- display: none !important; /* 隐藏搜索框 */
-}
-
-.hope-ui-light .hope-c-PJLV-ikEIIxw-css {
- background-color: rgba(255, 255, 255, .7); /* 设置搜索框背景为半透明白色 */
-}
-
-.hope-c-dhzjXW.hope-c-XNyZK.hope-c-PJLV.hope-c-PJLV-ijhzIfm-css:hover {
- color: #ffb6c1 !important; /* 悬停时颜色为粉色 */
- background: none; /* 悬停时不显示背景 */
-}
-
+/* 模态框背景和效果设置 */
 .hope-ui-light section[id*="hope-modal-cl"] {
- background-color: rgba(250, 250, 250, .75) !important; /* 设置模态框背景 */
- backdrop-filter: blur(5px); /* 设置模态框模糊效果 */
+    background-color: rgba(250, 250, 250, 0.75) !important; /* 设置模态框背景 */
+    backdrop-filter: blur(5px); /* 设置模态框模糊效果 */
 }
 
-/*公告板*/
-.hope-notification__list.hope-c-UdTFD.hope-c-UdTFD-jEXiZO-placement-top-end.hope-c-PJLV.hope-c-PJLV-ijhzIfm-css {
- max-width: fit-content; /* 设置公告板的最大宽度为内容宽度 */
+/* 公告板最大宽度设置 */
+.hope-notification__list {
+    max-width: fit-content; /* 设置公告板的最大宽度为内容宽度 */
 }
 
-/*目录框*/
+/* 目录框背景色设置 */
 .hope-ui-light .obj-box,
-.hope-ui-light .hope-c-PJLV-ikSuVsl-css,
-.hope-ui-light .hope-c-PJLV-ijgzmFG-css {
-	background-color: rgba(255, 255, 255, .8) !important
-		/*标题栏、目录框和工具栏背景色和透明度(亮)*/
+.hope-ui-light .hope-c-PJLV-ikSuVsl-css {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* 设置目录框背景色为半透明白色 */
 }
 
-/*底部*/
+/* 隐藏底部 */
 .footer {
-	display: none !important
-		/*隐藏页脚(自行选择)*/
+    display: none !important; /* 隐藏页脚 */
 }
 
-#footer {
-	line-height: 50px;
-	text-align: center;
-	letter-spacing: 1px
-}
-
-
-
-/*白天背景图*/
+/* 白天背景图设置 */
 .hope-ui-light {
-	background-image: url(https://moe.jitsu.top/api/?sort=pc);
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-image: url(https://moe.jitsu.top/api/?sort=pc); /* 白天背景图 */
+    background-position: center; /* 背景图居中 */
+    background-attachment: fixed; /* 背景图固定 */
+    background-size: cover; /* 背景图覆盖 */
+    background-repeat: no-repeat; /* 不重复背景图 */
 }
 
-@media screen and (max-width:960px) {
-	.hope-ui-light {
-		background-image: url(https://moe.jitsu.top/api/?sort=mp);
-	}
+/* 小屏幕背景图设置 */
+@media screen and (max-width: 960px) {
+    .hope-ui-light {
+        background-image: url(https://moe.jitsu.top/api/?sort=mp); /* 小屏幕下的背景图 */
+    }
 }
 
-/*夜间背景图*/
+/* 夜间背景色设置 */
 .hope-ui-dark {
-	background-color: #555555 !important
-		/*暗色模式背景色*/
+    background-color: #555555 !important; /* 暗色模式背景色 */
 }
 
-.hope-ui-dark div.hope-c-PJLV.hope-c-PJLV-iicyfOA-css>div>nav {
-	background-color: transparent;
-}
-
-
-/*底部CSS，.APP .tanle这三个一起的*/
+/* 底部样式设置 */
 dibu {
-    border-top: 0px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+    border-top: 0; /* 底部无边框 */
+    position: absolute; /* 绝对定位 */
+    bottom: 0; /* 靠下对齐 */
+    width: 100%; /* 宽度 100% */
+    margin: 0; /* 无外边距 */
+    padding: 0; /* 无内边距 */
 }
+
 .App {
-    min-height: 85vh;
+    min-height: 85vh; /* 设置最小高度为 85vh */
 }
+
 .table {
-    margin: auto;
+    margin: auto; /* 表格居中 */
+}
+</style>
+
+<!-- 鼠标指针特效 -->
+<style type="text/css">
+.main-content img, body {
+    cursor: url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Arrow.cur), auto; /* 默认指针 */
 }
 
+.actions > div, .expand-done, .main-content figure > figcaption div, .navbar-above .navbar-nav .item, .navbar-searchicon, .navbar-slideicon, .photos .picture-details, .widget .ad-tag .click-close, a, button {
+    cursor: url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Hand.cur), auto; /* 手指指针 */
+}
+
+blockquote, code, h1, h2, h3, h4, h5, h6, hr, input[type=text], li, p, td, textarea, th {
+    cursor: url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/IBeam.cur), auto; /* 文本选择指针 */
+}
 </style>
 
-<!--鼠标指针特效 开始-->
-<style type="text/css">
-.main-content img,body{cursor:url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Arrow.cur),auto}
-.actions>div,.expand-done,.main-content figure>figcaption div,.navbar-above .navbar-nav .item,.navbar-searchicon,.navbar-slideicon,.photos .picture-details,.widget .ad-tag .click-close,a,button{cursor:url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Hand.cur),auto}
-blockquote,code,h1,h2,h3,h4,h5,h6,hr,input[type=text],li,p,td,textarea,th{cursor:url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/IBeam.cur),auto}
-</style>
-<!--鼠标指针特效 结束-->
-
-
-</style>
-
-<!--自定义头部结束-->
+<!-- 自定义头部结束 -->
