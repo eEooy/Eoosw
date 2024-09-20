@@ -120,10 +120,12 @@ body {
  background-color: rgba(255, 255, 255, .8) !important; /* 设置目录框背景为半透明白色 */
 }
 
-/*底部*/
+/*底部_注释掉*/
+/*
 .footer {
- display: none !important; /* 隐藏页脚 */
+    display: none !important; /* 隐藏页脚 */
 }
+*/
 
 #footer {
  line-height: 50px; /* 设置页脚文本行高 */
