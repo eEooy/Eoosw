@@ -29,14 +29,29 @@ body {
 }
 /*白天背景图*/
 .hope-ui-light {
-  background-image: url("http://pic.rmb.bdstatic.com/bjh/7569b014a1abafd5481298763300ae1d.png") !important;
-  background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;
+	background-image: url(https://moe.jitsu.top/api/?sort=pc);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
+
+@media screen and (max-width:960px) {
+	.hope-ui-light {
+		background-image: url(https://moe.jitsu.top/api/?sort=mp);
+	}
+}
+
 /*夜间背景图*/
 .hope-ui-dark {
-    background-image: url(http://pic.rmb.bdstatic.com/bjh/ebe942a9de49856f389c65f25a338335.png) !important;
-    background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;
+	background-color: #555555 !important
+		/*暗色模式背景色*/
 }
+
+.hope-ui-dark div.hope-c-PJLV.hope-c-PJLV-iicyfOA-css>div>nav {
+	background-color: transparent;
+}
+
 /*主列表透明*/
 .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
     background-color: rgba(255, 255, 255, 0.5) !important;
@@ -100,6 +115,15 @@ dibu {
 
 <!-- 加载 Live2D 库 -->
 <script src="https://unpkg.com/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+<!-- 初始化 Live2D 看板娘 -->
+<script>
+	L2Dwidget.init({ 
+		"model": { "jsonPath":"https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json", "scale": 1, "hHeadPos":0.5, "vHeadPos":0.618 },
+		"display": { "position": "right", "width": 100, "height": 200, "hOffset": 0, "vOffset": 0 }, 
+		"mobile": { "show": true, "scale": 0.5 },
+		"react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } 
+		});
+</script>
 
 <style>
 /*白天模式 搜索主体+毛玻璃*/
