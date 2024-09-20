@@ -1,5 +1,4 @@
 
-
 <!-- 鼠标点击特效 - 爱心 -->
 <script type="text/javascript">
     !function (e, t, a) {
@@ -65,8 +64,8 @@
 <div id="customize" style="display: none;">
     <div>
         <br />
-        <center class="dibu">
-            <div style="line-height: 20px;font-size: 10pt;font-weight: bold;">
+        <div style="text-align: center;">
+            <div style="line-height: 20px; font-size: 10pt; font-weight: bold;">
                 <span>
                     "
                     <span style="color: rgb(248, 223, 114); font-weight: bold;" id="hitokoto">
@@ -75,7 +74,7 @@
                         </a>
                     </span> "
                 </span>
-                <p style="color:#F0C9CF;margin-left: 10rem;font-size: 8pt;">
+                <p style="color: #F0C9CF; margin-left: 10rem; font-size: 8pt;">
                     <small>—— Eliva's Cloud</small>
                 </p>
             </div>
@@ -106,16 +105,14 @@
                     </a>
                 </span>
             </div>
-        </center>
+        </div>
         <br />
         <br />
     </div>
 </div>
 
-
 <!--一言API-->
-    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 
 <!-- 延迟加载结束 -->
 
