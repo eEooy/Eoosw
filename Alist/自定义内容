@@ -1,127 +1,126 @@
-
-<!-- 鼠标点击特效 - 爱心 -->
-<script type="text/javascript">
-    !function (e, t, a) {
-        function r() {
-            for (var e = 0; e < s.length; e++) {
-                var heart = s[e];
-                if (heart.alpha <= 0) {
-                    t.body.removeChild(heart.el);
-                    s.splice(e, 1);
-                } else {
-                    heart.y--;
-                    heart.scale += 0.02; // 增加 scale 的增量
-                    heart.alpha -= 0.05; // 增加透明度减小的速度
-                    heart.el.style.cssText = "left:" + heart.x + "px;top:" + heart.y + "px;opacity:" + heart.alpha + ";transform:scale(" + heart.scale + ") rotate(45deg);background:" + heart.color + ";z-index:99999";
-                }
-            }
-            requestAnimationFrame(r);
-        }
-
-        function n() {
-            var t = "function" == typeof e.onclick && e.onclick;
-            e.onclick = function (e) {
-                t && t(), o(e);
-            }
-        }
-
-        function o(e) {
-            var a = t.createElement("div");
-            a.className = "heart", s.push({
-                el: a,
-                x: e.clientX - 5,
-                y: e.clientY - 5,
-                scale: 1,
-                alpha: 1,
-                color: c()
-            });
-            t.body.appendChild(a);
-        }
-
-        function i(e) {
-            var a = t.createElement("style");
-            a.type = "text/css";
-            try {
-                a.appendChild(t.createTextNode(e));
-            } catch (t) {
-                a.styleSheet.cssText = e;
-            }
-            t.getElementsByTagName("head")[0].appendChild(a);
-        }
-
-        function c() {
-            return "rgb(" + (255 * Math.random()) + "," + (255 * Math.random()) + "," + ~~(255 * Math.random()) + ")";
-        }
-
-        var s = [];
-        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-            setTimeout(e, 1e3 / 60);
-        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);transition: transform 0.5s ease-out;}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r();
-    }(window, document);
-</script>
+<!-- 自定义内容开始 -->
 
 <!-- 延迟加载开始 -->
 <div id="customize" style="display: none;">
-    <div>
-        <br />
-        <div style="text-align: center;">
-            <div style="line-height: 20px; font-size: 10pt; font-weight: bold;">
-                <span>
-                    "
-                    <span style="color: rgb(248, 223, 114); font-weight: bold;" id="hitokoto">
-                        <a href="#" id="hitokoto_text">
-                            "人生最大的遗憾,就是在最无能为力的时候遇到一个想要保护一生的人."
-                        </a>
-                    </span> "
-                </span>
-                <p style="color: #F0C9CF; margin-left: 10rem; font-size: 8pt;">
-                    <small>—— Eliva's Cloud</small>
-                </p>
-            </div>
-
-            <div style="font-size: 15px; font-weight: bold;">
-                <span class="nav-item">
-                    <a class="nav-link" href="mailto:699996@protonmail.com" target="_blank">
-                        <i class="fa-duotone fa-envelope-open" style="color:#FFB6C1" aria-hidden="true"></i>
-                        邮箱 |
+    <!-- 中间内容区域 -->
+    <div style="text-align: center;">
+        <!-- 引用文本区域 -->
+        <div style="line-height: 20px; font-size: 10pt; font-weight: bold;">
+            <span>
+                "<span style="color: rgb(248, 223, 114); font-weight: bold;" id="hitokoto">
+                    <a href="#" id="hitokoto_text">
+                        "人生最大的遗憾,就是在最无能为力的时候遇到一个想要保护一生的人."
                     </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="xxxxxx" target="_blank">
-                        <i class="fas fa-edit" style="color:#FFB6C1" aria-hidden="true"></i>
-                        博客 |
-                    </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="/@manage" target="_blank">
-                        <i class="fa-solid fa-folder-gear" style="color:#FFB6C1;" aria-hidden="true"></i>
-                        管理 |
-                    </a>
-                </span>
-                <span class="nav-item">
-                    <a class="nav-link" href="https://github.com/Xhofe/alist" target="_blank">
-                        <i class="fa-solid fa-copyright" style="color:#FFB6C1;" aria-hidden="true"></i>
-                        Alist
-                    </a>
-                </span>
-            </div>
+                </span>"
+            </span>
+            <p style="color: #F0C9CF; margin-left: 10rem; font-size: 8pt;">
+                <small>—— Eliva's Cloud</small>
+            </p>
         </div>
-        <br />
-        <br />
+
+        <!-- 导航链接区域 -->
+        <div style="font-size: 15px; font-weight: bold;">
+            <span class="nav-item">
+                <a class="nav-link" href="mailto:699996@protonmail.com" target="_blank">
+                    <i class="fa-duotone fa-envelope-open" style="color:#FFB6C1" aria-hidden="true"></i>
+                    邮箱 |
+                </a>
+            </span>
+            <span class="nav-item">
+                <a class="nav-link" href="xxxxxx" target="_blank">
+                    <i class="fas fa-edit" style="color:#FFB6C1" aria-hidden="true"></i>
+                    博客 |
+                </a>
+            </span>
+            <span class="nav-item">
+                <a class="nav-link" href="/@manage" target="_blank">
+                    <i class="fa-solid fa-folder-gear" style="color:#FFB6C1;" aria-hidden="true"></i>
+                    管理 |
+                </a>
+            </span>
+            <span class="nav-item">
+                <a class="nav-link" href="https://github.com/Xhofe/alist" target="_blank">
+                    <i class="fa-solid fa-copyright" style="color:#FFB6C1;" aria-hidden="true"></i>
+                    Alist
+                </a>
+            </span>
+        </div>
+        <br /><br />
     </div>
+
+    <!-- 鼠标点击特效 - 爱心 -->
+    <script type="text/javascript">
+        !function (e, t, a) {
+            function r() {
+                for (var e = 0; e < s.length; e++) {
+                    var heart = s[e];
+                    if (heart.alpha <= 0) {
+                        t.body.removeChild(heart.el);
+                        s.splice(e, 1);
+                    } else {
+                        heart.y--;
+                        heart.scale += 0.02; // 增加 scale 的增量
+                        heart.alpha -= 0.05; // 增加透明度减小的速度
+                        heart.el.style.cssText = "left:" + heart.x + "px;top:" + heart.y + "px;opacity:" + heart.alpha + ";transform:scale(" + heart.scale + ") rotate(45deg);background:" + heart.color + ";z-index:99999";
+                    }
+                }
+                requestAnimationFrame(r);
+            }
+
+            function n() {
+                var t = "function" == typeof e.onclick && e.onclick;
+                e.onclick = function (e) {
+                    t && t(), o(e);
+                }
+            }
+
+            function o(e) {
+                var a = t.createElement("div");
+                a.className = "heart", s.push({
+                    el: a,
+                    x: e.clientX - 5,
+                    y: e.clientY - 5,
+                    scale: 1,
+                    alpha: 1,
+                    color: c()
+                });
+                t.body.appendChild(a);
+            }
+
+            function i(e) {
+                var a = t.createElement("style");
+                a.type = "text/css";
+                try {
+                    a.appendChild(t.createTextNode(e));
+                } catch (t) {
+                    a.styleSheet.cssText = e;
+                }
+                t.getElementsByTagName("head")[0].appendChild(a);
+            }
+
+            function c() {
+                return "rgb(" + (255 * Math.random()) + "," + (255 * Math.random()) + "," + ~~(255 * Math.random()) + ")";
+            }
+
+            var s = [];
+            e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+                setTimeout(e, 1e3 / 60);
+            };
+            i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);transition: transform 0.5s ease-out;}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r();
+        }(window, document);
+    </script>
+
+    <!-- 一言API -->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
+    <!-- 延迟加载配套使用JS -->
+    <script>
+        let interval = setInterval(() => {
+            if (document.querySelector(".footer")) {
+                document.querySelector("#customize").style.display = ""; // 显示自定义内容
+                clearInterval(interval); // 清除定时器
+            }
+        }, 200);
+    </script>
 </div>
-
-<!--一言API-->
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-
-<!-- 延迟加载结束 -->
-
-<!-- 延迟加载配套使用JS -->
-<script>
-    let interval = setInterval(() => {
-        if (document.querySelector(".footer")) {
-            document.querySelector("#customize").style.display = "";
-            clearInterval(interval);
-        }
-    }, 200);
-</script>
+<!-- 自定义内容结束 -->
