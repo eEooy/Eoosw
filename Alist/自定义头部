@@ -2,6 +2,10 @@
 <!--Alist V3建议添加的，已经默认添加了，如果你的没有建议加上-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
 
+<!-- Font6，自定义底部使用和看板娘使用的图标和字体文件-->
+<link type='text/css' rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.0.1/css/fontawesome.min.css" media='all'>
+<link href="https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css" rel="stylesheet">
+
 <!-- 引入字体，全局字体使用 -->
 <style>
 @font-face {
@@ -18,9 +22,6 @@ body {
 }
 </style>
 
-<!-- Font6，自定义底部使用和看板娘使用的图标和字体文件 -->
-<link type='text/css' rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.0.1/css/fontawesome.min.css" media='all'>
-<link href="https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css" rel="stylesheet">
 
 <style>
 /* 去除通知栏 右上角 X */
@@ -117,21 +118,23 @@ body {
 .hope-ui-light .obj-box,
 .hope-ui-light .hope-c-PJLV-ikSuVsl-css,
 .hope-ui-light .hope-c-PJLV-ijgzmFG-css {
- background-color: rgba(255, 255, 255, .8) !important; /* 设置目录框背景为半透明白色 */
+	background-color: rgba(255, 255, 255, .8) !important
+		/*标题栏、目录框和工具栏背景色和透明度(亮)*/
 }
 
-/*底部_注释掉*/
-/*
+/*底部*/
 .footer {
-    display: none !important; /* 隐藏页脚 */
+	display: none !important
+		/*隐藏页脚(自行选择)*/
 }
-*/
 
 #footer {
- line-height: 50px; /* 设置页脚文本行高 */
- text-align: center; /* 设置页脚文本居中 */
- letter-spacing: 1px; /* 设置字母间距 */
+	line-height: 50px;
+	text-align: center;
+	letter-spacing: 1px
 }
+
+
 
 /*白天背景图*/
 .hope-ui-light {
@@ -173,19 +176,6 @@ dibu {
 }
 .table {
     margin: auto;
-}
-
-/*渐变背景CSS*/
-#canvas-basic {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -999;
 }
 
 </style>
