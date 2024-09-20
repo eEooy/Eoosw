@@ -1,23 +1,4 @@
-<!-- 初始化 Live2D 看板娘 -->
-<script>
-  L2Dwidget.init({
-    model: {
-      jsonPath: 'https://raw.githubusercontent.com/eEooy/live2D/refs/heads/master/model/xiaomai/xiaomai.model.json',
-    },
-    display: {
-      position: 'right',
-      width: 80,
-      height: 160,
-    },
-    mobile: {
-      show: true
-    },
-    react: {
-      opacityDefault: 1,
-      opacityOnHover: 0.8
-    }
-  });
-</script>
+
 
 <!-- 鼠标点击特效 - 爱心 -->
 <script type="text/javascript">
