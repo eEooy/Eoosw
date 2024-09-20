@@ -36,7 +36,16 @@
     display: none!important;
 }
 
-
+live2D看板娘
+<style>
+#live2d-widget {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+</style>
 
 
     /* 
@@ -63,7 +72,7 @@
 
  /* 白天模式背景 */
     .hope-ui-light {
-        background-image: url(https://xxxxxxxx) !important;
+        background-image: url(http://www.musz.cn/wp-content/download/bingAPI.php) !important;
         background-attachment: fixed;
         background-position: 100%;
         background-size: cover;
@@ -71,7 +80,7 @@
     }
 /* 黑夜模式背景 */
     .hope-ui-dark {
-        background-image: url(https://raw.githubusercontent.com/eEooy/Eoosw/main/Alist/IMG_3460.jpeg) !important;
+        background-image: url(http://www.musz.cn/wp-content/download/bingAPI.php) !important;
         background-attachment: fixed;
         background-position: 100%;
         background-size: cover;
