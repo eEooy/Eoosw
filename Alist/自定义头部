@@ -1,22 +1,71 @@
 <!--自定义头部开始-->
 <!--Alist V3建议添加的，已经默认添加了，如果你的没有建议加上-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
- 
-<!--引入字体，全局字体使用-->
-<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
 
-<!-- Font6，自定义底部使用和看板娘使用的图标和字体文件-->
+<!-- 引入字体，全局字体使用 -->
+<style>
+@font-face {
+    font-family: 'HarmonyOS Medium';
+    src: url('https://raw.githubusercontent.com/eEooy/Eoosw/refs/heads/main/Alist/TTF/HarmonyOSMedium.ttf') format('truetype');
+}
+
+* {
+    font-family: 'HarmonyOS Medium', sans-serif;
+    font-weight: bold;
+}
+body {
+    font-family: 'HarmonyOS Medium', sans-serif;
+}
+</style>
+
+<!-- Font6，自定义底部使用和看板娘使用的图标和字体文件 -->
 <link type='text/css' rel="stylesheet" href="https://npm.elemecdn.com/font6pro@6.0.1/css/fontawesome.min.css" media='all'>
 <link href="https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css" rel="stylesheet">
 
 <style>
-
 /* 去除通知栏 右上角 X */
-.notify-render .hope-close-button {
+.notify-render .hope-close-button{
     display: none;
 }
-/*底部CSS，.App .table这三个一起的*/
- dibu {
+/*白天背景图*/
+.hope-ui-light{
+  background-image: url("http://pic.rmb.bdstatic.com/bjh/7569b014a1abafd5481298763300ae1d.png") !important;
+  background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;
+}
+/*夜间背景图*/
+.hope-ui-dark {
+    background-image: url(http://pic.rmb.bdstatic.com/bjh/ebe942a9de49856f389c65f25a338335.png) !important;
+    background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;
+}
+/*主列表透明*/
+.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+background-color: rgba(255, 255, 255, 0.5) !important;
+}
+/*readme透明*/
+.hope-c-PJLV.hope-c-PJLV-ikSuVsl-css{
+background-color: rgba(255, 255, 255, 0.5) !important;
+}
+/*顶部右上角切换按钮透明*/
+.hope-c-ivMHWx-hZistB-cv.hope-icon-button{
+background-color: rgba(255, 255, 255, 0.3) !important;
+}
+/*右下角侧边栏按钮透明*/
+.hope-c-PJLV-ijgzmFG-css{
+background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+/*白天模式代码块透明*/
+.hope-ui-light pre{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+/*夜间模式代码块透明*/
+.hope-ui-dark pre {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/*底部CSS，.APP .tanle这三个一起的*/
+dibu {
     border-top: 0px;
     position: absolute;
     bottom: 0;
@@ -30,111 +79,34 @@
 .table {
     margin: auto;
 }
- 
 /*去掉底部*/
 .footer {
-    display: none!important;
-}
-
-live2D看板娘
-<style>
-#live2d-widget {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-    pointer-events: none;
-}
-</style>
-
-
-    /* 
-      樱花：https://www.dmoe.cc
-      夏沫：https://cdn.seovx.com
-      搏天：https://api.btstu.cn/doc/sjbz.php
-      姬长信：https://github.com/insoxin/API
-      小歪：https://api.ixiaowai.cn/
-      保罗：https://api.paugram.com
-      墨天逸：https://api.mtyqx.cn
-      岁月小筑：https://img.xjh.me
-      东方Project：https://img.paulzzh.com
-     */
-
-/*白天背景图*/
-/*.hope-ui-light{
-    background-image: url("https://img.paulzzh.com") !important;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-attachment:fixed;
-    background-position-x:center;
-    text-align: center;
-}*/
-
- /* 白天模式背景 */
-    .hope-ui-light {
-        background-image: url(http://www.musz.cn/wp-content/download/bingAPI.php) !important;
-        background-attachment: fixed;
-        background-position: 100%;
-        background-size: cover;
-        text-align: center;
-    }
-/* 黑夜模式背景 */
-    .hope-ui-dark {
-        background-image: url(http://www.musz.cn/wp-content/download/bingAPI.php) !important;
-        background-attachment: fixed;
-        background-position: 100%;
-        background-size: cover;
-        text-align: center;
-    }
-
-
-/*夜间背景图*/
-/*.hope-ui-dark {
-    background-image: url(https://cdn.seovx.com/d/?mom=302) !important;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-attachment:fixed;
-    background-position-x:center;
-    text-align: center;
-}*/
-
-/*主页主体框*/
-/*白天*/
-.hope-c-PJLV-igScBhH-css{
-    background: rgba(255, 255, 255, .4);
-    background-color: #ffffff72 !important;
-    backdrop-filter: saturate(180%) blur(20px)!important;
-}
-
-/*夜晚*/
-.hope-c-PJLV-iigjoxS-css{
-    background: rgba(255, 255, 255, .4);
-    background-color: #00000090 !important;
-    backdrop-filter: saturate(180%) blur(20px)!important;
-}
-
-/*搜索框*/
-.hope-c-PJLV-ikEIIxw-css{
-    background: rgba(255, 255, 255, .4);
-    background-color: #ffffff72 !important;
-    backdrop-filter: saturate(180%) blur(20px)!important;
+    display: none !important;
 }
 
 /*全局字体*/
-*{
-    font-family:LXGW WenKai;
-}
-*{
-    font-weight:bold;
-}
-body {
-    font-family: LXGW WenKai;
+*{font-family:LXGW WenKai}
+*{font-weight:bold}
+body {font-family: LXGW WenKai;}
+
+
+/*渐变背景CSS*/
+#canvas-basic {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -999;
 }
 
-/*右下角侧边栏按钮透明*/
-.hope-c-PJLV-ijgzmFG-css{
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
+</style>
+
+<!-- 加载 Live2D 库 -->
+<script src="https://unpkg.com/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
 
 
 <style>
@@ -177,87 +149,20 @@ body {
 }
 </style>
 
-<style>
-/*左侧侧边栏目录*/
-/*白天模式*/
- .hope-ui-light .hope-c-PJLV-ieGWMbI-css {
-    background: rgba(255, 255, 255, 0.3) !important;
-}
-/*夜间模式*/
- .hope-ui-dark .hope-c-PJLV-ieGWMbI-css {
-    background-color:rgb(0 0 0 / 50%)!important;
-}
-/* 返回顶部 */
- .hope-c-PJLV-ihVEsOa-css {
-    background: rgba(255, 255, 255, 0.3) !important;
-}
-.hope-ui-dark .hope-c-PJLV-ihVEsOa-css {
-    background-color:rgb(0 0 0 / 50%)!important;
-}
-
-/*正常情况未使用吸附功能*/
-/*导航条*/
-/*白天模式*/
- .hope-ui-light .hope-c-PJLV-idaeksS-css {
-    background-color: rgba(255, 255, 255, 0.5)!important;
-    border-radius: 10px !important;
-}
-/*夜间模式*/
- .hope-ui-dark .hope-c-PJLV-idaeksS-css {
-    background-color:rgb(0 0 0 / 50%)!important;
-    border-radius: 10px !important;
-}
-/*顶栏*/
- .hope-c-PJLV-ikaMhsQ-css {
-    background: rgba(255, 255, 255, 0) !important;
-}
-
-
-/* 吸附到页面顶部 */
-/*顶部*/
- .hope-c-PJLV-icWrYmg-css {
-    background: rgba(255, 255, 255, 0) !important;
-}
-/*导航条*/
- .hope-c-PJLV-icKsjdm-css::after {
-    background: rgba(255, 255, 255, 0) !important;
-}
-/*白天模式*/
- .hope-ui-light .hope-c-PJLV-icKsjdm-css {
-    background-color: rgba(255, 255, 255, 0.5)!important;
-    border-radius: 10px !important;
-}
-/*夜间模式*/
- .hope-ui-dark .hope-c-PJLV-icKsjdm-css {
-    background-color:rgb(0 0 0 / 50%)!important;
-    border-radius: 10px !important;
-}
-
-/*仅吸附导航栏*/
-/*导航条*/
-.hope-c-PJLV-ifdXShc-css::after {
-    background: rgba(255, 255, 255, 0) !important;
-}
-/*白天模式*/
- .hope-ui-light .hope-c-hrsMRY {
-    background-color: rgba(255, 255, 255, 0.5)!important;
-    border-radius: 10px !important;
-}
-/*夜间模式*/
- .hope-ui-dark .hope-c-hrsMRY {
-    background-color:rgb(0 0 0 / 50%)!important;
-    border-radius: 10px !important;
-}
-</style>
-
-
 <!--鼠标指针特效 开始-->
 <style type="text/css">
 .main-content img,body{cursor:url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Arrow.cur),auto}.actions>div,.expand-done,.main-content figure>figcaption div,.navbar-above .navbar-nav .item,.navbar-searchicon,.navbar-slideicon,.photos .picture-details,.widget .ad-tag .click-close,a,button{cursor:url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/Hand.cur),auto}blockquote,code,h1,h2,h3,h4,h5,h6,hr,input[type=text],li,p,td,textarea,th{cursor:url(https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/halo-dream/cursor/breeze/IBeam.cur),auto}
 </style>
 <!--鼠标指针特效 结束-->
 
-
+<style>
+#live2d-widget {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
 </style>
 
 <!--自定义头部结束-->
