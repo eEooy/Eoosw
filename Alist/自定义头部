@@ -1,7 +1,6 @@
 <!--自定义头部开始-->
 <!--Alist V3建议添加的，已经默认添加了，如果你的没有建议加上-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll"></script>
-<link href="https://fastly.jsdelivr.net/gh/anosu/alist-style@main/moe/style-v3.css" rel="stylesheet" type="text/css" />
 
 <!-- 引入字体，全局字体使用 -->
 <style>
@@ -28,6 +27,110 @@ body {
 .notify-render .hope-close-button {
     display: none;
 }
+
+
+/*图标和按钮*/
+.hope-icon {
+	color: #8abcd1 !important
+		/*设置所有图标颜色*/
+}
+
+.hope-button {
+	color: #fff !important;
+	/*设置按钮字体为白色*/
+	background-color: #8abcd1 !important
+		/*设置按钮背景为粉色*/
+}
+.hope-ui-dark .hope-c-ivMHWx-hZistB-cv.hope-c-PJLV.hope-c-PJLV-iikaotv-css {
+ background-color: #202425 !important; /* 暗色模式下设置特定元素的背景为深灰色 */
+}
+
+.hope-c-PJLV-ijzCLcW-css,
+.hope-c-mHASU-kFfbLQ-colorScheme-info,
+.hope-ui-dark .hope-c-ivMHWx-hZistB-cv.hope-c-PJLV.hope-c-PJLV-iikaotv-css svg {
+ color: #ffb6c1 !important; /* 设置特定元素和其 SVG 的颜色为粉色 */
+}
+
+.hope-c-mHASU-kFfbLQ-colorScheme-info[data-focus] {
+ border-color: #ffb6c1 !important; /* 聚焦状态下的边框颜色 */
+ box-shadow: 0 0 0 2px #ffcdd4 !important; /* 聚焦时的阴影效果 */
+}
+
+.hope-ui-light .hope-c-mHASU-kFfbLQ-colorScheme-info svg {
+ color: white !important; /* 亮色模式下 SVG 颜色为白色 */
+}
+
+.hope-ui-dark .hope-c-mHASU-kFfbLQ-colorScheme-info svg {
+ color: #202425 !important; /* 暗色模式下 SVG 颜色为深灰色 */
+}
+
+.left-toolbar-box svg:hover,
+.center-toolbar svg:hover {
+ color: white !important; /* 悬停时图标颜色为白色 */
+ background-color: #ffb6c1; /* 悬停时背景颜色为粉色 */
+}
+
+.hope-c-PJLV-icHSmvX-css {
+ border-radius: 5px; /* 设置元素的圆角 */
+}
+
+/*顶部header*/
+#root>div.header.hope-center.hope-c-jKOUQW.hope-c-PJLV.hope-c-PJLV-ikaMhsQ-css {
+ background-color: transparent; /* 设置顶部 Header 背景为透明 */
+}
+
+/*标题栏*/
+.hope-ui-light .hope-breadcrumb__list,
+#root>div.hope-c-PJLV.hope-c-PJLV-iicyfOA-css>div>nav {
+ border-radius: 10px !important; /* 设置标题栏的圆角 */
+}
+
+.hope-ui-light div.hope-c-PJLV.hope-c-PJLV-iicyfOA-css>div>nav {
+ background-color: rgba(255, 255, 255, .7); /* 设置标题栏背景为半透明白色 */
+}
+
+/*搜索框*/
+.header-right .hope-c-dhzjXW.hope-c-PJLV-ihYBJPK-css {
+ display: none !important; /* 隐藏搜索框 */
+}
+
+.hope-ui-light .hope-c-PJLV-ikEIIxw-css {
+ background-color: rgba(255, 255, 255, .7); /* 设置搜索框背景为半透明白色 */
+}
+
+.hope-c-dhzjXW.hope-c-XNyZK.hope-c-PJLV.hope-c-PJLV-ijhzIfm-css:hover {
+ color: #ffb6c1 !important; /* 悬停时颜色为粉色 */
+ background: none; /* 悬停时不显示背景 */
+}
+
+.hope-ui-light section[id*="hope-modal-cl"] {
+ background-color: rgba(250, 250, 250, .75) !important; /* 设置模态框背景 */
+ backdrop-filter: blur(5px); /* 设置模态框模糊效果 */
+}
+
+/*公告板*/
+.hope-notification__list.hope-c-UdTFD.hope-c-UdTFD-jEXiZO-placement-top-end.hope-c-PJLV.hope-c-PJLV-ijhzIfm-css {
+ max-width: fit-content; /* 设置公告板的最大宽度为内容宽度 */
+}
+
+/*目录框*/
+.hope-ui-light .obj-box,
+.hope-ui-light .hope-c-PJLV-ikSuVsl-css,
+.hope-ui-light .hope-c-PJLV-ijgzmFG-css {
+ background-color: rgba(255, 255, 255, .8) !important; /* 设置目录框背景为半透明白色 */
+}
+
+/*底部*/
+.footer {
+ display: none !important; /* 隐藏页脚 */
+}
+
+#footer {
+ line-height: 50px; /* 设置页脚文本行高 */
+ text-align: center; /* 设置页脚文本居中 */
+ letter-spacing: 1px; /* 设置字母间距 */
+}
+
 /*白天背景图*/
 .hope-ui-light {
 	background-image: url(https://moe.jitsu.top/api/?sort=pc);
@@ -53,31 +156,6 @@ body {
 	background-color: transparent;
 }
 
-/*主列表透明*/
-.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
-/*readme透明*/
-.hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
-/*顶部右上角切换按钮透明*/
-.hope-c-ivMHWx-hZistB-cv.hope-icon-button {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-}
-/*右下角侧边栏按钮透明*/
-.hope-c-PJLV-ijgzmFG-css {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/*白天模式代码块透明*/
-.hope-ui-light pre {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-}
-/*夜间模式代码块透明*/
-.hope-ui-dark pre {
-    background-color: rgba(255, 255, 255, 0) !important;
-}
 
 /*底部CSS，.APP .tanle这三个一起的*/
 dibu {
@@ -112,58 +190,6 @@ dibu {
     z-index: -999;
 }
 
-</style>
-
-<!-- 加载 Live2D 库 -->
-<script src="https://unpkg.com/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
-<!-- 初始化 Live2D 看板娘 -->
-<script>
-	L2Dwidget.init({ 
-		"model": { "jsonPath":"https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json", "scale": 1, "hHeadPos":0.5, "vHeadPos":0.618 },
-		"display": { "position": "right", "width": 100, "height": 200, "hOffset": 0, "vOffset": 0 }, 
-		"mobile": { "show": true, "scale": 0.5 },
-		"react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } 
-		});
-</script>
-
-<style>
-/*白天模式 搜索主体+毛玻璃*/
-.hope-ui-light .hope-c-PJLV-iiBaxsN-css {
-   background-color: rgba(255,255,255,0.2)!important;
-   backdrop-filter: blur(10px)!important;
-}
- 
-/*白天模式 搜索栏输入框+毛玻璃*/
-.hope-ui-light .hope-c-kvTTWD-hYRNAb-variant-filled {
-   background-color: rgba(255,255,255,0.2)!important;
-   backdrop-filter: blur(10px)!important;
-}
- 
-/*白天模式 搜索按钮+毛玻璃*/
-.hope-ui-light .hope-c-PJLV-ikEIIxw-css {
-   background-color: rgba(255,255,255,0.2)!important;
-   backdrop-filter: blur(10px)!important;
-   padding: var(--hope-space-1)!important;
-}
- 
-/*夜间模式搜索主体+毛玻璃*/
-.hope-ui-dark .hope-c-PJLV-iiBaxsN-css {
-    background-color: rgb(0 0 0 / 10%)!important;
-    backdrop-filter: blur(10px)!important;
-}
- 
-/*夜间模式搜索栏+毛玻璃*/
-.hope-ui-dark .hope-c-kvTTWD-hYRNAb-variant-filled {
-    background-color: rgb(0 0 0 / 10%)!important;
-    backdrop-filter: blur(10px)!important;
-}
- 
-/*夜间模式 搜索按钮+毛玻璃*/
-.hope-ui-dark .hope-c-PJLV-ikEIIxw-css {
-    background-color: rgb(0 0 0 / 10%)!important;
-    backdrop-filter: blur(10px)!important;
-    padding: var(--hope-space-1)!important;
-}
 </style>
 
 <!--鼠标指针特效 开始-->
