@@ -130,6 +130,12 @@
         <br />
     </div>
 </div>
+
+
+<!--一言API-->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
+
 <!-- 延迟加载结束 -->
 
 <!-- 延迟加载配套使用JS -->
