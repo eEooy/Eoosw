@@ -172,10 +172,6 @@ dibu {
 .table {
     margin: auto;
 }
-/*去掉底部*/
-.footer {
-    display: none !important;
-}
 
 /*渐变背景CSS*/
 #canvas-basic {
@@ -200,14 +196,7 @@ blockquote,code,h1,h2,h3,h4,h5,h6,hr,input[type=text],li,p,td,textarea,th{cursor
 </style>
 <!--鼠标指针特效 结束-->
 
-<style>
-#live2d-widget {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-    pointer-events: none;
-}
+
 </style>
 
 <!--自定义头部结束-->
