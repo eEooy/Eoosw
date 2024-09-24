@@ -48,6 +48,9 @@
         <br /><br />
     </div>
 
+    <!-- 一言API -->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
     <!-- 鼠标点击特效 - 爱心 -->
     <script type="text/javascript">
         !function (e, t, a) {
@@ -109,9 +112,6 @@
             i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);transition: transform 0.5s ease-out;}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r();
         }(window, document);
     </script>
-
-    <!-- 一言API -->
-    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 
     <!-- 延迟加载配套使用JS -->
     <script>
