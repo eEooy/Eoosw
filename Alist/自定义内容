@@ -113,6 +113,41 @@
         }(window, document);
     </script>
 
+    <!-- 鼠标拖影特效 - 变幻效果 -->
+    <script type="text/javascript">
+        document.addEventListener('mousemove', function (e) {
+            var trail = document.createElement('div');
+            trail.className = 'mouse-trail';
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            // 随机设置形状、大小、颜色和旋转角度
+            trail.style.width = Math.random() * 15 + 5 + 'px'; // 随机大小
+            trail.style.height = trail.style.width; // 保持宽高一致
+            trail.style.borderRadius = Math.random() > 0.5 ? '50%' : '20%'; // 圆形或椭圆
+            trail.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`; // 随机颜色
+            trail.style.transform = `rotate(${Math.random() * 360}deg)`; // 随机旋转
+            document.body.appendChild(trail);
+            setTimeout(function () {
+                trail.remove();
+            }, 300); // 拖影显示时间
+        });
+
+        // 添加CSS样式，控制拖影的过渡效果
+        const trailStyle = document.createElement('style');
+        trailStyle.innerHTML = `
+            .mouse-trail {
+                position: fixed;
+                pointer-events: none;
+                transition: opacity 0.5s, transform 0.2s;
+                opacity: 0.8;
+            }
+            .mouse-trail:hover {
+                opacity: 0;
+            }
+        `;
+        document.head.appendChild(trailStyle);
+    </script>
+
     <!-- 延迟加载配套使用JS -->
     <script>
         let interval = setInterval(() => {
