@@ -4,14 +4,13 @@ mp命名规则：
 
 ### 新命名规则
 
-```
-{{title}} ({{year}}) - {{original_title}}{% if part %} - {{part}}{% endif %}{% if videoFormat %} - [{{videoFormat}}]{% endif %}{% if edition %} [{{edition}}]{% endif %}{% if videoCodec %} [{{videoCodec}}]{% endif %}{% if audioCodec %} [{{audioCodec}}]{% endif %}{% if releaseGroup %} [{{releaseGroup}}]{% endif %}{{fileExt}}
-```
+电影重命名规则：
 
-### 示例
+``{{title}}{% if year %} ({{year}}){% endif %}/{{title}}{% if year %} ({{year}}){% endif %}{% if part %}-{{part}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{% if edition %} - {{edition}}{% endif %}{% if videoCodec %} - {{videoCodec}}{% endif %}{% if audioCodec %} - {{audioCodec}}{% endif %}{% if releaseGroup %} - {{releaseGroup}}{% endif %}{{fileExt}}
 
-根据你的文件信息，生成的文件名会是：
 
-```
-蝙蝠侠大战超人：正义黎明 (2016) - Batman v Superman: Dawn of Justice - [2160p][PROPER EXTENDED IMAX][HEVC][DTS-HD.MA TrueHD.7.1.Atmos][Mo Cuishle].mkv
+剧集重命名规则：
+
+{{title}}{% if year %} ({{year}}){% endif %}/Season {{season}}/{{title}} - {{season_episode}}{% if part %}-{{part}}{% endif %}{% if episode_title %} - {{episode_title}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{% if edition %} - {{edition}}{% endif %}{% if videoCodec %} - {{videoCodec}}{% endif %}{% if audioCodec %} - {{audioCodec}}{% endif %}{% if customization %} - {{customization}}{% endif %}{% if releaseGroup %} - {{releaseGroup}}{% endif %}{{fileExt}}
+
 ```
